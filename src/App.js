@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { useState, useEffect } from 'react';
+import MathComponent from './MathComponent';
+//import { Home } from './home';
+//import { Counter } from './counter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+export default function App(){
+      return(
+    
+        <MathComponent />
+    
+      )
+}
+
+/*
+const App = () => {
+  const [count, setCounter] = useState(0);
+  
+  useEffect(() => {
+    alert("reload");
+  },[]
+);
+
+  return(
+           <div>
+                  <button onClick={() => setCounter((prevCount)=>(prevCount-1))}>-</button>
+                  <h1>{count}</h1>
+                  <button onClick={() => setCounter((prevCount)=>(prevCount+1))}>+</button>
+          </div>
   );
+
 }
 
 export default App;
+*/
